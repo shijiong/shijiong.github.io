@@ -228,6 +228,27 @@ pip list | grep onnxruntime-genai
 
 ---
 
+## 直接下载已编译 Wheel（免编译）
+
+如果你不希望自己编译，可以直接下载我提供的 ARM64 Wheel 包：
+
+- [onnxruntime_genai-0.14.0.dev0-cp313-cp313-linux_aarch64.whl](/assets/downloads/onnxruntime_genai-0.14.0.dev0-cp313-cp313-linux_aarch64.whl)
+
+安装方式（本地文件）：
+
+```bash
+pip install ./onnxruntime_genai-0.14.0.dev0-cp313-cp313-linux_aarch64.whl
+```
+
+安装方式（在线 URL）：
+
+```bash
+pip install "https://shijiong.github.io/assets/downloads/onnxruntime_genai-0.14.0.dev0-cp313-cp313-linux_aarch64.whl"
+```
+
+> 请确保 Python 版本与 wheel 标签一致（该包为 CPython 3.13，aarch64）。
+{: .prompt-warning }
+
 ## 小结
 
 在 Linux ARM64 平台上构建 onnxruntime-genai wheel 的关键点是两件事：

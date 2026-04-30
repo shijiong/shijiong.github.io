@@ -228,6 +228,27 @@ Fix: Refer to Section 5. Install dependencies through apt and update CMake to us
 
 ---
 
+## Direct Download of Prebuilt Wheel (No Build Required)
+
+If you do not want to build from source, you can directly download the ARM64 wheel provided here:
+
+- [onnxruntime_genai-0.14.0.dev0-cp313-cp313-linux_aarch64.whl](/assets/downloads/onnxruntime_genai-0.14.0.dev0-cp313-cp313-linux_aarch64.whl)
+
+Install from local file:
+
+```bash
+pip install ./onnxruntime_genai-0.14.0.dev0-cp313-cp313-linux_aarch64.whl
+```
+
+Install from URL:
+
+```bash
+pip install "https://shijiong.github.io/assets/downloads/onnxruntime_genai-0.14.0.dev0-cp313-cp313-linux_aarch64.whl"
+```
+
+> Make sure your Python version matches the wheel tag (this package targets CPython 3.13 on aarch64).
+{: .prompt-warning }
+
 ## Summary
 
 For Linux ARM64, the two most important points when building onnxruntime-genai wheels are:
