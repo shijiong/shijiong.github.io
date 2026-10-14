@@ -10,12 +10,12 @@ order: 4
 {: .prompt-info }
 
 <p align="left">
-	<img alt="MVP" src="https://img.shields.io/badge/Microsoft%20MVP-18%20Years-0078D4?style=flat-square&logo=microsoft" />
+	<img alt="MVP" src="https://img.shields.io/badge/Microsoft%20MVP-19%20Years-0078D4?style=flat-square&logo=microsoft" />
 	<img alt="Azure" src="https://img.shields.io/badge/Azure-AI%20and%20IoT-0089D6?style=flat-square&logo=microsoftazure" />
 	<img alt="Academic" src="https://img.shields.io/badge/Professor-Circuits%20and%20Systems-2E7D32?style=flat-square" />
 </p>
 
-I have been a Microsoft MVP for 18 years, and I am deeply interested in Azure AI Services, Azure IoT, Windows IoT, Windows Embedded, and UWP.
+I have been a Microsoft MVP for 19 years, and I am deeply interested in Azure AI Services, Azure IoT, Windows IoT, Windows Embedded, and UWP.
 
 I received my M.S. and Ph.D. degrees in Circuits and Systems from Beijing University of Posts and Telecommunications, China. I am currently a professor of Circuits and Systems at the School of Computer and Electronic Engineering, Zhejiang Wanli University, China.
 
@@ -26,7 +26,7 @@ I received my M.S. and Ph.D. degrees in Circuits and Systems from Beijing Univer
 | Area | Details |
 | --- | --- |
 | Role | Professor of Circuits and Systems, Zhejiang Wanli University |
-| Recognition | Microsoft MVP (18 years) |
+| Recognition | Microsoft MVP (19 years) |
 | Focus | Azure AI Services, Azure IoT, Windows IoT, Windows Embedded, UWP |
 
 > Academic depth combined with hands-on engineering practice.
@@ -36,7 +36,22 @@ I received my M.S. and Ph.D. degrees in Circuits and Systems from Beijing Univer
 
 ## Publications and Speaking
 
-- Author of the book: *Windows 10 IoT Application Developer Guide*
+### Books
+
+I am a co-author of the following books:
+
+**[*Windows 10 IoT Application Developer Guide*](https://www.tup.tsinghua.edu.cn/booksCenter/book_06668501.html)**
+
+**Authors:** Jiong Shi and Feng Liang.  
+**Publisher:** Tsinghua University Press.
+
+**[*Application Development for IoT Edge Computing*](https://wqbook.wqxuetang.com/book/3267197)**
+
+**Authors:** Jiong Shi, Jungan Chen, Minglei Fu, Yuanyuan Zhang and Ping Ni.  
+**Publisher:** Tsinghua University Press.
+
+### Writing and Speaking
+
 - Active blogger and technical writer
 - Speaker at Ignite China
 
