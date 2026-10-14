@@ -143,9 +143,9 @@ Linux 包采用解压使用的方式，CLI 位于安装目录的 `lib` 子目录
 
 下面两张图展示的是实测中的过程：将 `foundry-0.10.3-linux-arm64.tar.gz` 解压到 `/home/pi`，随后在文件管理器中找到安装目录。
 
-![在树莓派终端中将 0.10.3 ARM64 安装包解压到用户目录](/assets/img/posts/2026-10-10-foundry-local-raspberry-pi/step-01.png)
+![在树莓派终端中将 0.10.3 ARM64 安装包解压到用户目录](/assets/img/2026-10-10-foundry-local-raspberry-pi/step-01.png)
 
-![文件管理器中的 foundry-0.10.3-linux-arm64 目录](/assets/img/posts/2026-10-10-foundry-local-raspberry-pi/step-02.png)
+![文件管理器中的 foundry-0.10.3-linux-arm64 目录](/assets/img/2026-10-10-foundry-local-raspberry-pi/step-02.png)
 
 ### 4.3 统一后续命令的执行位置
 
@@ -158,7 +158,7 @@ cd /home/pi/foundry-0.10.3-linux-arm64/lib
 
 如果仍停留在安装根目录，等价写法是 `./lib/foundry --version`。截图中的 `0.10.3` 仅表示实测版本；新安装的版本应输出相应的新版本号。
 
-![实测中通过 --version 确认 CLI 版本为 0.10.3](/assets/img/posts/2026-10-10-foundry-local-raspberry-pi/step-03.png)
+![实测中通过 --version 确认 CLI 版本为 0.10.3](/assets/img/2026-10-10-foundry-local-raspberry-pi/step-03.png)
 
 目前，0.11.0 发布说明还列出了 SDK 与运行时包更新到 2.1.0、ONNX Runtime 更新到 1.30.0、ONNX Runtime GenAI 更新到 0.17.1 等变化。因此，不应期待新旧版本的全部诊断信息完全一致。
 
@@ -172,7 +172,7 @@ cd /home/pi/foundry-0.10.3-linux-arm64/lib
 
 `status` 会汇总系统、服务器、模型与连接等诊断信息。它适合用来确认架构、可用资源，以及 CLI 当前是否能连接本地服务器。
 
-![Foundry Local 状态输出，显示 Raspberry Pi 5、ARM64、内存和运行时信息](/assets/img/posts/2026-10-10-foundry-local-raspberry-pi/step-04.png)
+![Foundry Local 状态输出，显示 Raspberry Pi 5、ARM64、内存和运行时信息](/assets/img/2026-10-10-foundry-local-raspberry-pi/step-04.png)
 
 截图中的 `Not running` 和 `Local service: Not reachable` 表示检查时本地服务器尚未运行，**并不能单独说明安装失败**。后续模型命令可以触发服务器启动，也可以显式执行：
 
@@ -188,7 +188,7 @@ cd /home/pi/foundry-0.10.3-linux-arm64/lib
 ./foundry model --help
 ```
 
-![CLI 帮助列出的模型、运行、服务器、缓存与诊断命令](/assets/img/posts/2026-10-10-foundry-local-raspberry-pi/step-07.png)
+![CLI 帮助列出的模型、运行、服务器、缓存与诊断命令](/assets/img/2026-10-10-foundry-local-raspberry-pi/step-07.png)
 
 结合官方 [CLI 参考](https://learn.microsoft.com/en-us/azure/foundry-local/reference/reference-cli)，本文主要使用以下命令：
 
@@ -211,7 +211,7 @@ cd /home/pi/foundry-0.10.3-linux-arm64/lib
 ./foundry server status
 ```
 
-![本地服务器状态为 Ready，并显示回环地址与端口](/assets/img/posts/2026-10-10-foundry-local-raspberry-pi/step-06.png)
+![本地服务器状态为 Ready，并显示回环地址与端口](/assets/img/2026-10-10-foundry-local-raspberry-pi/step-06.png)
 
 实测截图显示服务器处于 `Ready` 状态，地址为 `http://127.0.0.1:46733`。这是当次运行的地址，不是所有安装都使用的固定端口；需要集成 HTTP 客户端时，应读取自己环境中的状态输出。
 
@@ -225,7 +225,7 @@ cd /home/pi/foundry-0.10.3-linux-arm64/lib
 ./foundry model list
 ```
 
-![模型列表命令自动启动服务器，并列出模型类型、大小、设备与缓存状态](/assets/img/posts/2026-10-10-foundry-local-raspberry-pi/step-05.png)
+![模型列表命令自动启动服务器，并列出模型类型、大小、设备与缓存状态](/assets/img/2026-10-10-foundry-local-raspberry-pi/step-05.png)
 
 实测中，该命令先启动了 Foundry Local 服务器，然后显示模型列表。可以重点查看：
 
@@ -247,9 +247,9 @@ cd /home/pi/foundry-0.10.3-linux-arm64/lib
 
 `whisper-tiny` 是较短的模型别名。Foundry Local 可以根据可用硬件选择相应变体；需要固定某个变体时，则使用完整模型 ID。
 
-![Whisper Tiny 模型下载中的进度显示](/assets/img/posts/2026-10-10-foundry-local-raspberry-pi/step-08.png)
+![Whisper Tiny 模型下载中的进度显示](/assets/img/2026-10-10-foundry-local-raspberry-pi/step-08.png)
 
-![Whisper Tiny 下载完成并写入本地缓存](/assets/img/posts/2026-10-10-foundry-local-raspberry-pi/step-09.png)
+![Whisper Tiny 下载完成并写入本地缓存](/assets/img/2026-10-10-foundry-local-raspberry-pi/step-09.png)
 
 实测中，别名解析为 `openai-whisper-tiny-generic-cpu:4`，显示下载大小约 **131 MB**。这是当时的模型版本和大小，不应作为后续版本始终不变的保证。
 
@@ -270,7 +270,7 @@ cd /home/pi/foundry-0.10.3-linux-arm64/lib
 ./foundry transcribe --help
 ```
 
-![transcribe 帮助中列出的模型、语言与音频文件参数](/assets/img/posts/2026-10-10-foundry-local-raspberry-pi/step-10.png)
+![transcribe 帮助中列出的模型、语言与音频文件参数](/assets/img/2026-10-10-foundry-local-raspberry-pi/step-10.png)
 
 本例使用三个参数：
 
@@ -293,7 +293,7 @@ cd /home/pi/foundry-0.10.3-linux-arm64/lib
   -f /home/pi/Documents/Recording.mp3
 ```
 
-![使用 Whisper Tiny 将英文 MP3 文件转录为文本](/assets/img/posts/2026-10-10-foundry-local-raspberry-pi/step-11.png)
+![使用 Whisper Tiny 将英文 MP3 文件转录为文本](/assets/img/2026-10-10-foundry-local-raspberry-pi/step-11.png)
 
 终端输出了英文文本，说明该环境中已经完成模型调用、音频文件读取与本地转录。若使用自己的文件，请替换为实际路径；路径包含空格时，需要用引号包裹。
 
@@ -308,7 +308,7 @@ cd /home/pi/foundry-0.10.3-linux-arm64/lib
   -f /home/pi/Documents/output_16k_mono.wav
 ```
 
-![使用 Whisper Tiny 将中文 WAV 文件转录为中文文本](/assets/img/posts/2026-10-10-foundry-local-raspberry-pi/step-12.png)
+![使用 Whisper Tiny 将中文 WAV 文件转录为中文文本](/assets/img/2026-10-10-foundry-local-raspberry-pi/step-12.png)
 
 `-l zh` 是中文语言提示，不是“将任意语言翻译成中文”的选项。截图表明，该实测环境能够对中文音频产生中文转录结果。
 
@@ -341,13 +341,13 @@ chmod u+x lib/foundry
 ./lib/foundry --version
 ```
 
-![为 CLI 添加执行权限后成功显示版本号](/assets/img/posts/2026-10-10-foundry-local-raspberry-pi/step-13.png)
+![为 CLI 添加执行权限后成功显示版本号](/assets/img/2026-10-10-foundry-local-raspberry-pi/step-13.png)
 
 ### 8.2 CLI 能运行，但本地服务器无法启动
 
 第二类错误出现在 `model list` 等需要本地服务器的操作中。截图提示无法启动安装目录下的 `lib/foundrylocald`，原因同样是 `Permission denied`。
 
-![模型命令因 foundrylocald 缺少执行权限而启动失败，以及旧版实测中的处理过程](/assets/img/posts/2026-10-10-foundry-local-raspberry-pi/step-14.png)
+![模型命令因 foundrylocald 缺少执行权限而启动失败，以及旧版实测中的处理过程](/assets/img/2026-10-10-foundry-local-raspberry-pi/step-14.png)
 
 原记录通过给 `lib` 目录内的文件批量添加执行权限恢复了运行。更稳妥的做法是**根据错误中出现的具体程序路径，仅修复需要执行的文件**。针对截图中的 `foundrylocald`：
 
