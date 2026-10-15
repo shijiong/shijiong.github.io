@@ -3,6 +3,9 @@ title: Building onnxruntime-genai Wheel on Linux ARM64
 date: 2026-04-30 13:05:00 +0800
 categories: [AI, ONNX Runtime, Linux]
 tags: [onnxruntime, onnxruntime-genai, arm64, jetson, raspberry-pi, wheel, cmake]
+image:
+  path: /assets/img/2026-04-30-linux-arm64-onnxruntime-genai-wheel-build/Cover.png
+  alt: Building onnxruntime-genai Wheel on Linux ARM64
 pin: false
 toc: true
 mermaid: true

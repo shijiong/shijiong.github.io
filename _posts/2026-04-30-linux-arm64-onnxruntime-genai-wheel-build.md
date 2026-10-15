@@ -3,6 +3,9 @@ title: Linux ARM64 平台下 onnxruntime-genai Wheel 包编译与构建
 date: 2026-04-30 13:00:00 +0800
 categories: [AI, ONNX Runtime, Linux]
 tags: [onnxruntime, onnxruntime-genai, arm64, jetson, raspberry-pi, wheel, cmake]
+image:
+  path: /assets/img/2026-04-30-linux-arm64-onnxruntime-genai-wheel-build/Cover.png
+  alt: Linux ARM64 平台下 onnxruntime-genai Wheel 包编译与构建
 pin: false
 toc: true
 mermaid: true

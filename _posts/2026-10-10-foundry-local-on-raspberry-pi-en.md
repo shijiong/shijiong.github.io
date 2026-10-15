@@ -4,6 +4,9 @@ date: 2026-10-10 19:30:00 +0800
 description: Install Foundry Local for Linux ARM64 on Raspberry Pi 5, understand its local inference architecture, manage models with the CLI, and transcribe English and Chinese audio files with Whisper Tiny.
 categories: [AI, Foundry Local]
 tags: [foundry-local, raspberry-pi, arm64, linux, onnxruntime, whisper, speech-to-text]
+image:
+  path: /assets/img/2026-10-10-foundry-local-raspberry-pi/PiFoundryLocal.png
+  alt: Running Foundry Local on Raspberry Pi
 lang: en
 pin: false
 toc: true

@@ -4,6 +4,9 @@ date: 2026-10-10 19:30:00 +0800
 description: 在 Raspberry Pi 5 上安装 Linux ARM64 版 Foundry Local，了解本地推理架构，使用 CLI 管理模型并通过 Whisper Tiny 转录中英文音频文件。
 categories: [AI, Foundry Local]
 tags: [foundry-local, raspberry-pi, arm64, linux, onnxruntime, whisper, speech-to-text]
+image:
+  path: /assets/img/2026-10-10-foundry-local-raspberry-pi/PiFoundryLocal.png
+  alt: 在 Raspberry Pi 上运行 Foundry Local
 pin: false
 toc: true
 mermaid: true
