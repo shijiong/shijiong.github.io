@@ -51,7 +51,7 @@ mermaid: true
 
 本项目的源代码托管在 GitHub：[shijiong/flask-audio-transcription](https://github.com/shijiong/flask-audio-transcription)，可结合本文查看具体实现。
 
-视频演示：[在优酷观看“声笺”演示](https://v.youku.com/v_show/id_XNjU4MTQyODE5Mg==.html)。
+视频演示：[在 Bilibili 观看“声笺”演示](https://www.bilibili.com/video/BV1EBHA68Eiw/)。
 
 ### 1.3 技术选型一览
 

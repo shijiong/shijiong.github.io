@@ -39,7 +39,7 @@ Each job also saves a 16 kHz mono WAV file, a TXT transcript, and a JSON record.
 
 The project source code is available on GitHub at [shijiong/flask-audio-transcription](https://github.com/shijiong/flask-audio-transcription), so you can explore the implementation alongside this article.
 
-Video demo: [Watch the Voice Notes demo on Youku](https://v.youku.com/v_show/id_XNjU4MTQyODE5Mg==.html).
+Video demo: [Watch the Voice Notes demo on Bilibili](https://www.bilibili.com/video/BV1EBHA68Eiw/).
 
 ## 2. Foundry Local and the model choices
 
